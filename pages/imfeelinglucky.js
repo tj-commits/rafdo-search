@@ -18,7 +18,7 @@ function ImFeelingLucky({ results }) {
         <link rel="icon" href="/favicon.jpg" />
       </Head>
     <div className="flex justify-center items-center flex-col py-10 px-10 gap-3">
-    <h1 className="text-3xl">Are you sure you're feeling lucky?</h1><br />
+    <h1 className="text-3xl">Are you sure you&apos;re feeling lucky?</h1><br />
     <div className="flex-row">
     <button className="btn" onClick={() => router.push(results.items[0].link)}>Yes</button>
     <button className="btn" onClick={() => router.push('/')}>No</button></div></div>
