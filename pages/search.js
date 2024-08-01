@@ -14,8 +14,8 @@ function Search({ results }) {
   return (
     <div>
       <Head>
-        <title>{router.query.term} - Google Search </title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{router.query.term} - Rafdo Search </title>
+        <link rel="icon" href="/favicon.jpg" />
       </Head>
       {/*header*/}
 
@@ -34,7 +34,7 @@ export async function getServerSideProps(context) {
   const API_KEY = process.env.API_KEY;
   const CONTEXT_KEY = process.env.CONTEXT_KEY;
 
-  const useDummyData = false; //true for devlopment (mock results)
+  const useDummyData = process.env.USE_DUMMY_DATA === 'true' ? true : false; //true for devlopment (mock results)
   const startIndex = context.query.start || "0";
 
   const data = useDummyData

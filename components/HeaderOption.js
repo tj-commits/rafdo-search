@@ -3,7 +3,7 @@ function HeaderOption({ Icon, title, selected }) {
     <div
       className={`flex items-center space-x-1 border-b-2 border-transparent hover:text-blue-400 
     hover:border-blue-400 pb-2 cursor-pointer ${
-      selected && "text-blue-500 boarder-blue-400"
+      selected && "text-blue-500 border-blue-400"
     }`}
     >
       <Icon className="h-5" />

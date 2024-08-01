@@ -12,7 +12,8 @@ import { useRouter } from "next/router";
 
 function HeaderOptions() {
   return (
-    <div className="flex w-full text-gray-700 justify-evenly text-sm lg:text-base lg:justify-start lg:space-x-36 lg:pl-52 boarer-b font-OpenSans">
+    <div>
+    {/*<div className="flex w-full text-gray-700 justify-evenly text-sm lg:text-base lg:justify-start lg:space-x-36 lg:pl-52 boarer-b font-OpenSans">
       <div className="flex space-x-6">
         <HeaderOption Icon={SearchIcon} title="All" selected />
         <a href="https://www.google.co.in/imghp?hl=en&ogbl">
@@ -43,7 +44,7 @@ function HeaderOptions() {
         </a>
         <p className="link">Tools</p>
       </div>
-    </div>
+    </div>*/}</div>
   );
 }
 
