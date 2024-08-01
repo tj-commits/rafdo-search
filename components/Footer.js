@@ -17,9 +17,6 @@ function Footer() {
           <a href="https://www.rafdo.rf.gd">
             <p className="link">Home</p>
           </a>
-          <a href="https://www.rafdo.rf.gd/about">
-            <p className="link">About</p>
-          </a>
           <a href="https://www.rafdo.rf.gd/products">
             <p className="link">Products</p>
           </a>
