@@ -76,7 +76,20 @@ function Search({ results }) {
     resultsItems.splice(resultsItems.length - 1,
       1)
   }
-  console.log(resultsItems)
+
+  const shouldShowMarty = (() => {
+    switch (router.query.term.toLowerCase()) {
+      case "cat": return true
+      case "kitty": return true
+      case "marty": return true
+      case "kitten": return true
+      case "martmart": return true
+      case "mart mart": return true
+      case "the martmart": return true
+      case "the mart mart": return true
+      default: return false
+    }
+  })()
   return (
     <div>
       <Head>
@@ -86,9 +99,12 @@ function Search({ results }) {
       {/*header*/}
 
       <Header term={router.query.term} />
-
+      
       {/*body*/}
       <SearchResults results={results} resultsItems={resultsItems} />
+      {shouldShowMarty === true && (
+        <img src="/images/marty.png" alt="The mart mart" className="absolute right-0 top-0" />
+      )}
     </div>
   )
 }
