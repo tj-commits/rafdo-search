@@ -98,6 +98,15 @@ function Search({ results }) {
       default: return false
     }
   })()
+  const shouldShowPizza = (() => {
+    switch (router.query.term.toLowerCase()) {
+      case "pizza": return true
+      case "pizza slice": return true
+      case "costco restaurant": return true
+      case "kirkland restaurant": return true
+      default: return false
+    }
+  })()
   return (
     <div>
       <Head>
@@ -115,6 +124,9 @@ function Search({ results }) {
       )}
       {shouldShowTheEarth === true && (
         <img src="/images/earth.png" alt="Our Blue Planet" className="absolute right-0 top-7" width="380" />
+      )}
+      {shouldShowPizza === true && (
+        <img src="/images/pizza.png" alt="Pizza slice" className="absolute right-0 top-7" width="500" />
       )}
     </div>
   )
