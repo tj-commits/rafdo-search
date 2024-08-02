@@ -45,11 +45,71 @@ function Search({ results }) {
         pagemap: {
           metatags: [{}],
         },
-      }
+      },
+      {
+        kind: "customsearch#result",
+        title: "Rafdo Games",
+        htmlTitle: "<b>Rafdo Games</b>",
+        link: "https://gamesfromrafdo.weebly.com",
+        displayLink: "gamesfromrafdo.weebly.com",
+        snippet: "Games by Rafdo. Rafdo makes some fun games for you guys :D",
+        htmlSnippet: "Games by Rafdo. Rafdo makes some fun games for you guys :D",
+        cacheId: "US-UIewrFroJ",
+        formattedUrl: "https://gamesfromrafdo.weebly.com",
+        htmlFormattedUrl: "https://<b>gamesfromrafdo</b>.weebly.com",
+        pagemap: {
+          metatags: [{}],
+        },
+      },
+      {
+        kind: "customsearch#result",
+        title: "ImageQuest",
+        htmlTitle: "<b>ImageQuest</b>",
+        link: "https://imagequest.rafdo.rf.gd",
+        displayLink: "imagequest.rafdo.rf.gd",
+        snippet: "A fun game by Rafdo.",
+        htmlSnippet: "A fun game by Rafdo.",
+        cacheId: "US-UIewrFroJ",
+        formattedUrl: "https://imagequest.rafdo.rf.gd",
+        htmlFormattedUrl: "https://<b>imagequest.rafdo</b>.rf.gd",
+        pagemap: {
+          metatags: [{}],
+        },
+      },
+      {
+        kind: "customsearch#result",
+        title: "Mrrps - What the cool cats are doing",
+        htmlTitle: "<b>Mrrps - What the cool cats are doing</b>",
+        link: "https://mrrps.vercel.app",
+        displayLink: "mrrps.vercel.app",
+        snippet: "Social media that's what the cool cats are doing.",
+        htmlSnippet: "Social media that's what the cool cats are doing.",
+        cacheId: "US-UIewrFroJ",
+        formattedUrl: "https://mrrps.vercel.app",
+        htmlFormattedUrl: "https://<b>mrrps</b>.vercel.app",
+        pagemap: {
+          metatags: [{}],
+        },
+      },
+      {
+        kind: "customsearch#result",
+        title: "Wikiopedia Ianna",
+        htmlTitle: "<b>Wikiopedia Ianna</b>",
+        link: "https://wikiopidia.weebly.com",
+        displayLink: "wikiopidia.weebly.com",
+        snippet: "Wikiopidia Ianna. The free encyclopedia by Rafdo.",
+        htmlSnippet: "Wikiopidia Ianna. The free encyclopedia by Rafdo.",
+        cacheId: "US-UIewrFroJ",
+        formattedUrl: "https://wikiopidia.weebly.com",
+        htmlFormattedUrl: "https://<b>wikiopidia</b>.weebly.com",
+        pagemap: {
+          metatags: [{}],
+        },
+      },
     )
     resultsItems.push(...oldResultsItems)
-    resultsItems.splice(resultsItems.length - 2,
-      2)
+    resultsItems.splice(resultsItems.length - 6,
+      6)
   }
   if (router.query.term.toLowerCase() === "mrrps" && (router.query.start === '0' || router.query.start == null)) {
     console.log('yes')
@@ -67,6 +127,32 @@ function Search({ results }) {
         cacheId: "US-UIewrFroJ",
         formattedUrl: "https://mrrps.vercel.app",
         htmlFormattedUrl: "https://<b>mrrps</b>.vercel.app",
+        pagemap: {
+          metatags: [{}],
+        },
+      },
+    )
+    resultsItems.push(...oldResultsItems)
+    resultsItems.splice(resultsItems.length - 1,
+      1)
+  }
+
+  if (router.query.term.toLowerCase() === "imagequest" && (router.query.start === '0' || router.query.start == null)) {
+    console.log('yes')
+    let oldResultsItems = [...resultsItems]
+    resultsItems = []
+    resultsItems.push(
+      {
+        kind: "customsearch#result",
+        title: "ImageQuest",
+        htmlTitle: "<b>ImageQuest</b>",
+        link: "https://imagequest.rafdo.rf.gd",
+        displayLink: "imagequest.rafdo.rf.gd",
+        snippet: "A fun game by Rafdo.",
+        htmlSnippet: "A fun game by Rafdo.",
+        cacheId: "US-UIewrFroJ",
+        formattedUrl: "https://imagequest.rafdo.rf.gd",
+        htmlFormattedUrl: "https://<b>imagequest.rafdo</b>.rf.gd",
         pagemap: {
           metatags: [{}],
         },
