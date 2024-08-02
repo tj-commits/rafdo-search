@@ -90,6 +90,14 @@ function Search({ results }) {
       default: return false
     }
   })()
+  const shouldShowTheEarth = (() => {
+    switch (router.query.term.toLowerCase()) {
+      case "earth": return true
+      case "the earth": return true
+      case "our blue planet": return true
+      default: return false
+    }
+  })()
   return (
     <div>
       <Head>
@@ -104,6 +112,9 @@ function Search({ results }) {
       <SearchResults results={results} resultsItems={resultsItems} />
       {shouldShowMarty === true && (
         <img src="/images/marty.png" alt="The mart mart" className="absolute right-0 top-0" />
+      )}
+      {shouldShowTheEarth === true && (
+        <img src="/images/earth.png" alt="Our Blue Planet" className="absolute right-0 top-7" width="380" />
       )}
     </div>
   )
