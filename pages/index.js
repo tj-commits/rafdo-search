@@ -27,7 +27,7 @@ export default function Home() {
 
     if (!term) return;
 
-    router.push(`/imfeelinglucky?term=${term}`);
+    router.push(`/imfeelinglucky?term=${term}&start=0`);
   };
   
 

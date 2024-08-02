@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/outline";
 import Avatar from "./Avatar";
 import HeaderOptions from "./HeaderOptions";
 
-function Header() {
+function Header({ term }) {
   const router = useRouter();
   const searchInputRef = useRef(null);
+  const [stateTerm, setStateTerm] = useState(term)
 
   const search = (e) => {
     e.preventDefault();
@@ -15,7 +16,7 @@ function Header() {
 
     if (!term) return;
 
-    router.push(`/search?term=${term}`);
+    router.push(`/search?term=${term}&start=0`);
   };
 
   return (
@@ -34,6 +35,8 @@ function Header() {
             ref={searchInputRef}
             className="flex-grow w-full focus:outline-none "
             type="text"
+            value={stateTerm}
+            onChange={() => setStateTerm(searchInputRef.current.value)}
           />
 
           <button type="submit" onClick={search}>

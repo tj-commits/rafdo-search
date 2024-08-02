@@ -1,6 +1,6 @@
 import PaginationButtons from "./PaginationButtons";
 import Footer from "./Footer";
-function SearchResults({ results }) {
+function SearchResults({ results, resultsItems }) {
   return (
     <div>
       <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[14%] lg:pl-52 font-OpenSans">
@@ -9,7 +9,7 @@ function SearchResults({ results }) {
           {results.searchInformation?.formattedSearchTime} seconds)
         </p>
 
-        {results.items?.map((result) => (
+        {resultsItems?.map((result) => (
           <div key={result.link} className="max-w-xl mb-8 font-sans">
             <div className="group">
               <a
