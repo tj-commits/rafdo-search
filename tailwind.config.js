@@ -11,6 +11,12 @@ module.exports = {
         Ubuntu: "'Ubuntu'",
         OpenSans: "'Open Sans'",
       },
+      height: {
+        '700': '700px',
+      },
+      width: {
+        '700': '700px',
+      }
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

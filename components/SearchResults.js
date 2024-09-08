@@ -1,16 +1,17 @@
 import PaginationButtons from "./PaginationButtons";
 import Footer from "./Footer";
-function SearchResults({ results, resultsItems }) {
+function SearchResults({ results, resultsItems, images }) {
   return (
     <div>
       <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[14%] lg:pl-52 font-OpenSans">
         <p className="text-gray-500 text-md mb-5 mt-3">
-          About {results.searchInformation?.formattedTotalResults} results (
-          {results.searchInformation?.formattedSearchTime} seconds)
+          {images === false ? `About ${results.searchInformation?.formattedTotalResults} results (
+          ${results.searchInformation?.formattedSearchTime} seconds` : `The reason only 10 images are shown at a time is because of the limitations of the API.`}
         </p>
-
-        {resultsItems?.map((result) => (
-          <div key={result.link} className="max-w-xl mb-8 font-sans">
+        <div className={images ? "flex flex-row" : ""}>
+        {resultsItems?.map((result) => 
+          images !== true ? (
+            <div key={result.link} className="max-w-xl mb-8 font-sans">
             <div className="group">
               <a
                 href={result.link}
@@ -31,7 +32,14 @@ function SearchResults({ results, resultsItems }) {
               {result.snippet}
             </p>
           </div>
-        ))}
+          ) : <>
+              
+            <a href={result.link} className="px-1"><img src={result.link} alt={result.snippet} className="border-2 border-black"></img></a>
+          </>
+        )}
+        </div>
+        
+
 
         <PaginationButtons />
       </div>
