@@ -52,13 +52,13 @@ function Search({ results, images }) {
           kind: "customsearch#result",
           title: "Rafdo Games",
           htmlTitle: "<b>Rafdo Games</b>",
-          link: "https://gamesfromrafdo.weebly.com",
-          displayLink: "gamesfromrafdo.weebly.com",
-          snippet: "Games by Rafdo. Rafdo makes some fun games for you guys :D",
-          htmlSnippet: "Games by Rafdo. Rafdo makes some fun games for you guys :D",
+          link: "https://rafdo.rf.gd/games/",
+          displayLink: "rafdo.rf.gd/games/",
+          snippet: "Games by Rafdo.",
+          htmlSnippet: "Games by Rafdo.",
           cacheId: "US-UIewrFroJ",
-          formattedUrl: "https://gamesfromrafdo.weebly.com",
-          htmlFormattedUrl: "https://<b>gamesfromrafdo</b>.weebly.com",
+          formattedUrl: "https://rafdo.rf.gd/games/",
+          htmlFormattedUrl: "https://<b>rafdo</b>.rf.gd<b>/games/</b>",
           pagemap: {
             metatags: [{}],
           },
@@ -80,34 +80,19 @@ function Search({ results, images }) {
         },
         {
           kind: "customsearch#result",
-          title: "Mrrps - What the cool cats are doing",
-          htmlTitle: "<b>Mrrps - What the cool cats are doing</b>",
-          link: "https://mrrps.vercel.app",
-          displayLink: "mrrps.vercel.app",
-          snippet: "Social media that's what the cool cats are doing.",
-          htmlSnippet: "Social media that's what the cool cats are doing.",
+          title: "Rafdo Notepad",
+          htmlTitle: "<b>Rafdo Notepad</b>",
+          link: "https://hegira.rf.gd/notepad/",
+          displayLink: "hegira.rf.gd",
+          snippet: "Rafdo Notepad is a useful online notepad application.",
+          htmlSnippet: "Rafdo Notepad is a useful online notepad application.",
           cacheId: "US-UIewrFroJ",
-          formattedUrl: "https://mrrps.vercel.app",
-          htmlFormattedUrl: "https://<b>mrrps</b>.vercel.app",
+          formattedUrl: "https://hegira.rf.gd/notepad/",
+          htmlFormattedUrl: "https://hegira.rf.gd/notepad/",
           pagemap: {
             metatags: [{}],
           },
-        },
-        {
-          kind: "customsearch#result",
-          title: "Wikiopedia Ianna",
-          htmlTitle: "<b>Wikiopedia Ianna</b>",
-          link: "https://wikiopidia.weebly.com",
-          displayLink: "wikiopidia.weebly.com",
-          snippet: "Wikiopidia Ianna. The free encyclopedia by Rafdo.",
-          htmlSnippet: "Wikiopidia Ianna. The free encyclopedia by Rafdo.",
-          cacheId: "US-UIewrFroJ",
-          formattedUrl: "https://wikiopidia.weebly.com",
-          htmlFormattedUrl: "https://<b>wikiopidia</b>.weebly.com",
-          pagemap: {
-            metatags: [{}],
-          },
-        },
+        }
       )
       resultsItems.push(...oldResultsItems)
       resultsItems.splice(resultsItems.length - 6,
@@ -138,7 +123,7 @@ function Search({ results, images }) {
       resultsItems.splice(resultsItems.length - 1,
         1)
     }
-  
+
     if (router.query.term.toLowerCase() === "imagequest" && (router.query.start === '0' || router.query.start == null)) {
       console.log('yes')
       let oldResultsItems = [...resultsItems]
@@ -208,7 +193,7 @@ function Search({ results, images }) {
       {/*header*/}
 
       <Header term={router.query.term} />
-      
+
       {/*body*/}
       <SearchResults results={results} resultsItems={resultsItems} images={images} />
       {shouldShowMarty === true && (
@@ -230,7 +215,7 @@ export async function getServerSideProps(ctx) {
   const API_KEY = process.env.API_KEY
   const CONTEXT_KEY = process.env.CONTEXT_KEY
 
-  const useDummyData = process.env.USE_DUMMY_DATA === "true" ?false : false //true for devlopment (mock results)
+  const useDummyData =false //true for devlopment (mock results)
   const startIndex = ctx.query.start || "0"
   const images = ctx.query.images === "yes"
 
@@ -250,6 +235,7 @@ export async function getServerSideProps(ctx) {
   } else {
     console.log('now')
   }*/
+ console.log(data)
   return {
     props: {
       results: data,

@@ -18,18 +18,10 @@ function Footer() {
             <p className="link">Home</p>
           </a>
           <a href="https://www.rafdo.rf.gd/products">
-            <p className="link">Products</p>
+            <p className="link">All Stuff</p>
           </a>
-          <a href="https://gamesfromrafdo.weebly.com">
+          <a href="https://rafdo.rf.gd/games/">
             <p className="link">Games</p>
-          </a>
-        </div>
-        <div className="flex justify-center text-sm space-x-5 md:ml-auto">
-          <a href="https://www.rafdo.rf.gd/privacy">
-            <p className="link">Privacy</p>
-          </a>
-          <a href="https://www.rafdo.rf.gd/terms">
-            <p className="link">TOS</p>
           </a>
         </div>
       </div>
