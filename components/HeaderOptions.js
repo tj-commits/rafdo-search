@@ -12,26 +12,35 @@ import { useRef } from "react";
 import { useRouter } from "next/router";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
 
-function HeaderOptions() {
+function HeaderOptions({ serp }) {
   const params = useSearchParams()
   const path = usePathname()
   return (
     <div>
     <div className="flex w-full text-gray-700 justify-evenly text-sm lg:text-base lg:justify-start lg:space-x-36 lg:pl-52 boarer-b font-OpenSans">
       <div className="flex space-x-6">
-        {params.get("images") !== "yes" ? (
-          <HeaderOption Icon={SearchIcon} title="Web" selected />
+        {params.get("images") !== "yes" && serp ? (
+          <HeaderOption Icon={SearchIcon} title="Web (API 1)" selected />
         ) : (
-          <a href={path + "?" + params.toString().split("&images=yes")[0]}>
+          <a href={'/searchs' + "?" + params.toString().split("&images=yes")[0]}>
           {" "}
-          <HeaderOption Icon={SearchIcon} title="Web" />
+          <HeaderOption Icon={SearchIcon} title="Web (API 2)" />
           </a>
-          
+
+        )}
+         {params.get("images") !== "yes" && !serp ? (
+          <HeaderOption Icon={SearchIcon} title="Web (API 2)" selected />
+        ) : (
+          <a href={'/search' + "?" + params.toString().split("&images=yes")[0]}>
+          {" "}
+          <HeaderOption Icon={SearchIcon} title="Web (API 2)" />
+          </a>
+
         )}
         {params.get("images") === "yes" ? (
           <HeaderOption Icon={PhotographIcon} title="Images" selected />
         ) : (
-          <a href={path + "?" + params.toString() + "&images=yes"}>
+          <a href={'/search' + "?" + params.toString() + "&images=yes"}>
           {" "}
           <HeaderOption Icon={PhotographIcon} title="Images" />
         </a>

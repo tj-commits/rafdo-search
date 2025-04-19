@@ -5,7 +5,7 @@ import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/outline";
 import Avatar from "./Avatar";
 import HeaderOptions from "./HeaderOptions";
 
-function Header({ term }) {
+function Header({ term, serp }) {
   const router = useRouter();
   const searchInputRef = useRef(null);
   const [stateTerm, setStateTerm] = useState(term)
@@ -16,7 +16,7 @@ function Header({ term }) {
 
     if (!term) return;
 
-    router.push(`/search?term=${term}&start=0`);
+    router.push(serp ? `/searchs?term=${term}&start=0` : `/search?term=${term}&start=0`);
   };
 
   return (
@@ -44,7 +44,7 @@ function Header({ term }) {
           </button>
         </form>
       </div>
-      <HeaderOptions />
+      <HeaderOptions serp={serp} />
     </header>
   );
 }

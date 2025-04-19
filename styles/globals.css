@@ -13,3 +13,8 @@
         @apply hover:underline cursor-pointer;
     }
 }
+
+#gl, #serp {
+    border: 2px solid gray;
+    width: fit-content
+}

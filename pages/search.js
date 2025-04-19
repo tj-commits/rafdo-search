@@ -6,11 +6,11 @@ import Response from "../Response"
 import { useRouter } from "next/router"
 import SearchResults from "../components/SearchResults"
 import PaginationButtons from "../components/PaginationButtons"
+import { getJson } from "serpapi"
 
-function Search({ results, images }) {
+function Search({ results, images}) {
   const router = useRouter()
   let resultsItems = results.items
-  console.log(router.query.term.toLowerCase())
   if (images !== true) {
 
     if (router.query.term.toLowerCase() === "rafdo" && (router.query.start === '0' || router.query.start == null)) {
@@ -156,12 +156,6 @@ function Search({ results, images }) {
     switch (router.query.term.toLowerCase()) {
       case "cat": return true
       case "kitty": return true
-      case "marty": return true
-      case "kitten": return true
-      case "martmart": return true
-      case "mart mart": return true
-      case "the martmart": return true
-      case "the mart mart": return true
       default: return false
     }
   })()
@@ -179,8 +173,6 @@ function Search({ results, images }) {
     switch (router.query.term.toLowerCase()) {
       case "pizza": return true
       case "pizza slice": return true
-      case "costco restaurant": return true
-      case "kirkland restaurant": return true
       default: return false
     }
   })()
@@ -235,7 +227,7 @@ export async function getServerSideProps(ctx) {
   } else {
     console.log('now')
   }*/
- console.log(data)
+
   return {
     props: {
       results: data,
