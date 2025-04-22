@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="pinterest" content="nopin" />
+        
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+		<title>Start your hegira</title>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+        <link
+			rel="stylesheet"
+			href="/hegiramain.css"
+		/>
+	</head>
+	<body>
+		<div style="background-color: rgb(207, 220, 230)">
+			<img
+				style="cursor: pointer"
+				onclick="location.assign('/hegira')"
+				src="/hegiralogo.png"
+				alt="Start your hegira."
+				width="100"
+                style="margin: 0; padding: 0;"
+			/>
+      <button onclick="location.assign('/hegirasettings.html')">Settings</button>
+		</div>
+		<main>
+			<img
+				src="/hegiralogo.png"
+				alt="start your hegira"
+				width="500"
+				id="logo"
+				style="margin-bottom: 200px;"
+			/>
+			<form method="GET" action="/webredirect/autodetect.html" id="form">
+				<input
+					id="q"
+					type="text"
+					name="q"
+                    class="sbox"
+					placeholder="Search with Rafdo Search"
+					required
+					autocapitalize="off"
+					autocomplete="off"
+				/>
+				<button
+					type="submit"
+					style="
+						background: white;
+						cursor: pointer;
+						outline: none;
+						border: none;
+						transform: translateY(23%);
+					"
+				>
+					<span style="color: red" class="material-symbols-outlined"
+						>search</span
+					>
+				</button>
+			</form>
+		</main>
+		<script>
+			const form = document.querySelector('#form')
+			const logo = document.querySelector('#logo')
+			if (localStorage.getItem('sse') == null) {
+				location.replace('/hegirasettingssave.html?redhome=yes&sse=serp')
+			} else {/*
+				switch (localStorage.getItem('sse')) {
+					case 'serp':
+
+					logo.src =
+							'/images/logo.png'
+
+						logo.style.marginBottom = '100px'
+							break
+
+					case 'tree':
+						logo.style.marginBottom = '100px'
+						logo.style.border = '5px solid green'
+						break
+					case 'xng': {
+						logo.src =
+							'https://etsi.me/static/themes/simple/img/searxng.png'
+						logo.setAttribute('alt', 'SearXNG')
+						logo.width = '250'
+						logo.style.marginBottom = '100px'
+						break
+					}
+					case 'gle': {
+						logo.src =
+							'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'
+						logo.setAttribute('alt', 'Google')
+						logo.style.marginBottom = '100px'
+						break
+					}
+					case 'duck': {
+						logo.src =
+							'/duck.png'
+						logo.setAttribute('alt', 'DuckDuckGo')
+						logo.style.marginBottom = '100px'
+						break
+					}
+                    default: {
+                        console.log('bruh')
+                    }
+				}*/
+				var searchengine
+				switch (localStorage.getItem('sse')) {
+					case 'serp':
+
+					searchengine = 'Rafdo Search'
+							break
+
+					case 'tree':
+						searchengine = 'Ecosia'
+						break
+					case 'xng': {
+						searchengine = 'etsi'
+						break
+					}
+					case 'gle': {
+						searchengine = 'Google'
+						break
+					}
+					case 'duck': {
+						searchengine = 'DuckDuckGo'
+						break
+					}
+
+					case 'yahoo': {
+						searchengine = 'Yahoo'
+						break
+					}
+
+					case 'bing': {
+						searchengine = 'bing'
+						break
+					}
+
+					case 'startpage': {
+						searchengine = 'startpage'
+						break
+					}
+
+					case 'att': {
+						searchengine = 'AT&T DNSErrorAssist'
+						break
+					}
+
+					case 'yandex': {
+						searchengine = 'Yandex'
+						break
+					}
+                    default: {
+                        console.log('bruh')
+                    }
+				}
+
+			}
+
+
+		</script>
+	</body>
+</html>

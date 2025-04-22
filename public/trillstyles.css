@@ -1,0 +1,45 @@
+body {
+  background: #333;
+  margin: 0;
+}
+
+#logo {
+  margin-bottom: 30px;
+}
+
+#sbox{
+  background: #333 !important;
+  border: none;
+  outline: none;
+}
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      flex-direction: column;
+    }
+
+                      #sbox, .sbox {
+              border-radius: 10px;
+      border: none;
+      outline: none;
+      background: rgb(207, 220, 230);
+        padding: 10px;
+        width: 80vw;
+          }
+
+              #gsc-i-id1 {
+      background-color: rgb(255, 255, 255) !important;
+background-image: none !important;
+  }
+  .gssb_a img {
+      display: none;
+  }
+  .gcsc-branding-img-noclear { display: none !important; }
+
+  .gcsc-find-more-on-google {
+      display: none !important;
+  }

@@ -7,21 +7,22 @@ import { useRouter } from "next/router";
 import SearchResults from "../components/SearchResults";
 import PaginationButtons from "../components/PaginationButtons";
 import { redirect } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 function ImFeelingLucky({ results }) {
   const router = useRouter();
+  const buttonRef = useRef(null)
 
+  useEffect(() => {
+    buttonRef.current.click()
+  }, [])
   return (
     <>
     <Head>
         <title>{router.query.term} - Rafdo Search </title>
         <link rel="icon" href="/favicon.jpg" />
       </Head>
-    <div className="flex justify-center items-center flex-col py-10 px-10 gap-3">
-    <h1 className="text-3xl">Are you sure you&apos;re feeling lucky?</h1><br />
-    <div className="flex-row">
-    <button className="btn" onClick={() => router.push(results.items[0].link)}>Yes</button>
-    <button className="btn" onClick={() => router.push('/')}>No</button></div></div>
+    <button className="btn" onClick={() => router.push(results.items[0].link)} ref={buttonRef}>redirecting..</button>
     </>
   )
 }

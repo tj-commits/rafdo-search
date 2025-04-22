@@ -1,0 +1,21 @@
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title id="trillionzhydratedtitleelement">Trillionz</title>
+<link rel="stylesheet" href="/styles.css">
+<script async src="https://cse.google.com/cse.js?cx=d3a03358b87a447c0">
+</script>
+<div class="gcse-searchbox-only" style="width: 50% !important;"></div>
+<script async src="https://cse.google.com/cse.js?cx=d3a03358b87a447c0">
+</script>
+<div class="gcse-searchresults-only"></div>
+<script>
+    const title = document.querySelector('#trillionzhydratedtitleelement')
+    const p = new URLSearchParams(location.search)
+    const q = p.get('q')
+    if (q != null) {
+    title.textContent = q + ' - Trillionz Search'
+    } else {
+        location.replace('/trillionz.html')
+    }
+</script>

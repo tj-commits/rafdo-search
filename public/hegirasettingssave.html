@@ -1,0 +1,16 @@
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<script>
+	const search = new URLSearchParams(location.search)
+	localStorage.setItem('settings-saved-before', true)
+	localStorage.setItem('sse', search.get('sse'))
+
+   if (search.get('redhome') != null) {
+      location.replace('/hegira.html')
+   } else {
+      location.replace('/hegirasettings.html')
+   }
+
+</script>

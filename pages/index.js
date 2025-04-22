@@ -18,12 +18,13 @@ export default function Home() {
     e.preventDefault();
     const term = searchInputRef.current.value;
     let gl = selectGLRef.current.value
-    let serp = selectGLRef.current.value === 'serp'
+    let serp = serpref.current.value === 'serp'
+    let tril = serpref.current.value === 'trillionz'
 
     if (!term) return;
     if (!gl) gl = 'us'
 
-    router.push(`/${serp ? 'searchs' : 'search'}?term=${term}&gl=${gl}&sourceid=website`);
+    router.push(`/${tril ? 'trillionz' : ''}${serp ? 'searchs' : 'search'}${tril ? '.html' : ''}?${tril ? 'q' : 'term'}=${term}&gl=${gl}&sourceid=website`);
   };
 
   const imFeelingLucky = (e) => {
@@ -346,7 +347,8 @@ export default function Home() {
 </select>
 <select name="serp" id="serp" ref={serpref}>
   <option value="serp">API 1 (SerpAPI)</option>
-  <option value="cse">API 2 (Google CSE)</option>
+  <option value="cse">API 2 (Google CSE API)</option>
+ {/* <option value="trillionz">API 3 (Google CSE Embed)</option>*/}
 
 </select>
 <a href="/why.html" className="text-blue-500 text-underline">Why are there two APIs?</a>

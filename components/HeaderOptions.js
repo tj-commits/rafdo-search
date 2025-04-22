@@ -24,7 +24,7 @@ function HeaderOptions({ serp }) {
         ) : (
           <a href={'/searchs' + "?" + params.toString().split("&images=yes")[0]}>
           {" "}
-          <HeaderOption Icon={SearchIcon} title="Web (API 2)" />
+          <HeaderOption Icon={SearchIcon} title="Web (API 1)" />
           </a>
 
         )}
