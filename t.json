@@ -2,13 +2,13 @@
   "kind": "customsearch#result",
   "title": "Rafdo",
   "htmlTitle": "<b>Rafdo</b>",
-  "link": "https://www.rafdo.rf.gd",
-  "displayLink": "www.rafdo.rf.gd",
+  "link": "https://rafdo.vercel.app",
+  "displayLink": "rafdo.vercel.app",
   "snippet": "Products that are good. From Rafdo.",
   "htmlSnippet": "Products that are good. From Rafdo.",
   "cacheId": "US-UIewrFroJ",
-  "formattedUrl": "https://www.rafdo.rf.gd",
-  "htmlFormattedUrl": "https://www.<b>rafdo.rf.gd</b>",
+  "formattedUrl": "https://rafdo.vercel.app",
+  "htmlFormattedUrl": "https://www.<b>rafdo.vercel.app</b>",
   "pagemap": {
       "metatags": [
         {}
