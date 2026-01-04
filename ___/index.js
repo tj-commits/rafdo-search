@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="px-2 py-2 font-xl">
-      This site is used by <Link href="https://rafdo.vercel.app" className="text-blue-500">Rafdo</Link>.
+      This site is used by <Link href="https://rafdo.netlify.app" className="text-blue-500">Rafdo</Link>.
     </div>
   );
 }

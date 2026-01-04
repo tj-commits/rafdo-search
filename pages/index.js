@@ -48,19 +48,19 @@ export default function Home() {
       <header className="flex w-full p-5 justify-between text-sm text-gray-800">
         {/*left section*/}
         <div className="flex space-x-4 items-center font-Ubuntu">
-          <a href="https://rafdo.vercel.app">
+          <a href="https://rafdo.netlify.app">
             <p className="link">Home</p>
           </a>
         </div>
 
         {/*right section*/}
         <div className="flex space-x-4 font-Ubuntu items-center">
-          <a href="https://rafdo.vercel.app/games/">
+          <a href="https://rafdo.netlify.app/games/">
             <p className="link">Games</p>
           </a>
 
           {/*Icons*/}
-          <a href="https://rafdo.vercel.app/products"><ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" /></a>
+          <a href="https://rafdo.netlify.app/products"><ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" /></a>
 
 
         </div>

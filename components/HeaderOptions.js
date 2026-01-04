@@ -54,7 +54,7 @@ function HeaderOptions({ serp }) {
           {" "}
           <HeaderOption Icon={NewspaperIcon} title="News" />
         </a>*/}
-        {/*<a href="https://rafdo.vercel.app/app/maps/">
+        {/*<a href="https://rafdo.netlify.app/app/maps/">
           {" "}
           <HeaderOption Icon={MapIcon} title="Maps" />
         </a>*/}{/*
